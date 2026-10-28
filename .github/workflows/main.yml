@@ -1,0 +1,31 @@
+name: IP Assignment Autograding
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test IP assignment program
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout student submission
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        run: |
+          test -f starter.sh
+          test -f tests/test_assignment.sh
+          test -f README.md
+          test -f autograding.json
+
+      - name: Validate shell syntax
+        run: bash -n starter.sh
+
+      - name: Run automated test cases
+        run: bash tests/test_assignment.sh

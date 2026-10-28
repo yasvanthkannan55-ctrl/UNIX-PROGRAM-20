@@ -1,0 +1,56 @@
+{
+  "assignment": "Assigning and Verifying an IP Address",
+  "total_points": 100,
+  "tests": [
+    {
+      "name": "Connection profile configuration",
+      "command": "CONNECTION_NAME is declared",
+      "points": 5
+    },
+    {
+      "name": "IPv4 address configuration",
+      "command": "IP_ADDRESS is declared",
+      "points": 10
+    },
+    {
+      "name": "Gateway and DNS configuration",
+      "command": "GATEWAY and DNS_SERVER are declared",
+      "points": 10
+    },
+    {
+      "name": "Connection status verification",
+      "command": "nmcli connection show or nmcli device status",
+      "points": 10
+    },
+    {
+      "name": "Static IPv4 configuration",
+      "command": "ipv4.method manual",
+      "points": 15
+    },
+    {
+      "name": "IP address and gateway settings",
+      "command": "ipv4.addresses and ipv4.gateway",
+      "points": 15
+    },
+    {
+      "name": "DNS configuration",
+      "command": "ipv4.dns",
+      "points": 5
+    },
+    {
+      "name": "Connection activation",
+      "command": "nmcli connection up",
+      "points": 10
+    },
+    {
+      "name": "IP verification",
+      "command": "nmcli device show or nmcli connection show",
+      "points": 10
+    },
+    {
+      "name": "Completion message and clean script",
+      "command": "Script structure and completion message",
+      "points": 10
+    }
+  ]
+}
